@@ -1,11 +1,12 @@
 *** Settings ***
+Documentation    This File contains all the Keywords required for the Code Validation
 
 Library    ../Function.py
 
 *** Keywords ***
 
 Check Boundary Values
-    [Documentation]  This Keyword will validate the pre, post and given value of the Funtion
+    [Documentation]  This Keyword will validate the given value with the Funtion under test
     [Arguments]    ${BoundaryNum}
     set suite variable    ${KeywordOutput}    ${EMPTY}
     IF  ${BoundaryNum}>100 or ${BoundaryNum}<-100 or ${BoundaryNum}==13
